@@ -17,7 +17,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          architecture: x64
+          cache: pip
+          cache-dependency-path: requirements.txt
       - name: Install pip dependencies
         working-directory: stuhealth
         run: pip install -U -r requirements.txt
